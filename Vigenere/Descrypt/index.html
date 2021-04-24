@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../../Substitution/style.css" />
+        <title>Vigenere</title>
+        <style>
+            .input {
+                border: none;
+                width: 90%;
+                height: auto;
+                margin-bottom: 2rem;
+                border-radius: 50px;
+                /* margin-left: auto;
+                margin-right: auto;
+                display: block; */
+                float: left;
+                padding: 2rem;
+                overflow: hidden;
+            }
+            .key__input {
+                /* margin-left: 2rem; */
+                float: left;
+                width: 50%;
+                height: 6vh;
+                padding-bottom: 4rem;
+            }
+            .btn__go {
+                width: 15rem;
+                /* margin-left: auto;
+                margin-right: auto;
+                display: block; */
+                float: left;
+                overflow: hidden;
+            }
+            .font {
+                font-size: 1.5rem;
+                color: #000;
+            }
+            .algo {
+                border-radius: 1rem;
+                height: 35vh;
+                overflow: scroll; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="app">
+            <header>
+                <h1 class="logo">Guess My Sentence 🤔!</h1>
+                <div class="input__clear input symbole cipher__input letter--normal"></div>
+                <div class="input__key input symbole key__input letter--false"></div>
+                <div class="input__cipher">
+                    <input class="input symbole clear__input letter--correct" type="text" placeholder="Give me you're Clear" name="" id="">
+                </div>
+                <div class="font input algo letter--normal">
+                    <h2>Algorithme: </h2><br>
+                    <p>
+                        Pour écrire ce petit programme c'est très facile, il faut juste se mettre dedans à font 😉.<br><br>
+                        Tout d'abord il faut que vous récupérer la longueur de la clé (key), j’ai bien dit la longueur pas la taille.<br><br>
+                        Par la suite il faut entrer dans une boucle qui commence de zéro jusqu’à la longueur du message en clair.<br><br>
+                        Par la suite y’a deux cas d figures par rapport au contenu du message.<br><br>
+                        <ul>
+                            <li>Cas 1 : Une lettre minuscule entre ‘a’ et ‘z’.</li>
+                            <li>Cas 2 : Une lettre majuscule entre ‘A’ et ‘Z’.</li>
+                            <li>Cas 3 : Ce n’est pas une lettre (un espace par exemple...).</li>
+                        </ul>  
+                        <br><br>
+                        Pour résoudre cet algorithme faut travailler avec les valeurs de chaque alphabet (la valeur en décimale de chaque caractère), comme on peut se déplacer entre les alphabets.<br><br>
+                        Dans les cas 1 et 2 faut créer une variable qui contient le décalage qu’on va faire, mais comment on va faire ça 🤔 (je sais ce n’est pas facile mais, je vais vous donner cette instruction: 😁<br><br> 
+                        <ul>
+                            <li>Cas1 : « (message_Clair[index] + key[index % longueur_key] - 2 * 'a' ) % 26 ».</li>
+                            <li>Cas2 : « (message_Clair[index] + key[index % longueur_key] -  'a' – 'A' ) % 26 ».</li>
+                        </ul> 
+                        <br>
+                    </p>
+                </div>
+                <button class="app__btn btn__go letter--correct">Submit👍</button>
+            </header>
+            <main></main>
+            <footer></footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

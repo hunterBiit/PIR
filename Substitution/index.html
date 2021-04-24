@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Guess My Sentence!</title>
+      </head>
+    <body>
+        <div class="app">
+            <header>
+                <h1 class="logo">Guess My Sentence 🤔!</h1>
+                <!-- <button class="btn again">Again!</button>-->
+                <div class="app__sentences letter--normal">
+                    <p class="app__cipher">xxxx</p>
+                    
+                    <p class="app__clear hidden">yyyy</p>
+                </div>
+            </header>
+            <main class="app__main">
+                <div class="letters">
+                    <section class="letters__row row">
+                        <div class="case">
+                            <p class="symbole lettre__cipher letter--normal">X</p>
+                        </div>
+                        <div class="symbole case"><p>:</p></div>
+                        <div class="case">
+                            <form class="form">
+                                <input type="text" maxlength="1" class="symbole lettre__input letter--normal" />
+                            </form>
+                        </div>
+                    </section>
+                    
+                    <section class="letters__row">
+                        <div class="case">
+                            <p class="symbole lettre__cipher letter--normal">X</p>
+                        </div>
+                        <div class="symbole case"><p>:</p></div>
+                        <div class="case">
+                            <form class="form">
+                                <input type="text" maxlength="1" class="symbole lettre__input letter--normal" />
+                            </form>
+                        </div>
+                    </section>               
+                </div>
+            </main>
+            <footer class="app__footer">
+                <button class="app__btn app__btn__reset letter--normal">Reset</button>
+                <button class="app__btn app__btn__submit letter--correct">Submit</button>
+            </footer>
+        </div>
+        <div class="hidden overlay">
+            <div class="app-sentence">Hello</div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
